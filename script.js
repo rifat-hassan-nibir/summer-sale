@@ -5,6 +5,10 @@ const cards = document.getElementsByClassName("card");
 
 for (const card of cards) {
   card.addEventListener("click", function () {
+    // Add modal functionality attribute
+    const button = document.getElementById("make-purchase");
+    button.setAttribute("onclick", "my_modal_5.showModal()");
+
     const title = card.querySelector("h3").innerText;
     const productPrice = parseFloat(card.querySelector("span").innerText.split(" ")[1]);
     totalPrice += productPrice;
@@ -43,4 +47,12 @@ document.getElementById("apply-btn").addEventListener("click", function () {
     alert("Spend more than 200$ to get the discount");
   }
   document.getElementById("input-field").value = "";
+});
+
+// Empty cart check
+document.getElementById("make-purchase").addEventListener("click", function () {
+  if (totalPrice) {
+  } else {
+    alert("Add items to cart first");
+  }
 });

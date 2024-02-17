@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -40,6 +40,22 @@
         <div
           class="max-w-full mx-auto grid grid-cols-1 lg:grid-cols-5 gap-5 px-20 bg-slate-50 cursor-pointer"
         >
+          <!-- Modal -->
+          <!-- Open the modal using ID.showModal() method -->
+          <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+              <h3 class="font-bold text-lg text-center">
+                Congratulations! <br />
+                Your Purchase is Complete.
+              </h3>
+              <div class="modal-action">
+                <form method="dialog">
+                  <!-- if there is a button in form, it will close the modal -->
+                  <button class="btn">Close</button>
+                </form>
+              </div>
+            </div>
+          </dialog>
           <div class="col-span-4">
             <!-- start Kitchenware  -->
             <div>
@@ -299,7 +315,9 @@
                 <p class="text-xl font-bold py-2">Discount: $<span id="discountPrice"></span></p>
                 <p class="text-xl font-bold pb-2">Total: $<span id="total"></span></p>
                 <hr class="my-4" />
-                <button class="btn btn-wide bg-[#F11A7B] text-white">Make Purchase</button>
+                <button id="make-purchase" class="btn btn-wide bg-[#F11A7B] text-white">
+                  Make Purchase
+                </button>
               </div>
             </div>
           </div>
